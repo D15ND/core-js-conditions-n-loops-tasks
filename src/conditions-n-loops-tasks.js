@@ -68,8 +68,13 @@ function getMaxNumber(a, b, c) {
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  * {x: 1, y: 1}, {x: 2, y: 8} => false
  */
-function canQueenCaptureKing(/* queen, king */) {
-  throw new Error('Not implemented');
+function canQueenCaptureKing(queen, king) {
+  const dx = Math.abs(queen.x - king.x);
+  const dy = Math.abs(queen.y - king.y);
+  if (queen.x === king.x || queen.y === king.y || dx === dy) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -210,6 +215,14 @@ function isContainNumber(/* num, digit */) {
  */
 function getBalanceIndex(/* arr */) {
   throw new Error('Not implemented');
+  // let sum = 0;
+  // for (let i = 0; i < arr.length; i += 1) {
+  //   if (sum === arr[i]) {
+  //     return i;
+  //   }
+  //   sum += arr[i];
+  // }
+  // return -1;
 }
 
 /**
